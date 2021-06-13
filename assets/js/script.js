@@ -42,7 +42,7 @@ $(function(){
                 duration: 3000,
                 easing: 'swing',
                 step: function (now) {
-                        $(this).text(Math.ceil(now));
+                    $(this).text(Math.ceil(now));
             }
         });
     });
@@ -88,9 +88,19 @@ $(function(){
     });
 
     /* ================= scroll up ================= */
-    var $homeSection = $('#home')
+    var skillsDistance = $('#skills').offset().top;
+    var $scrollUp = $('.scrollup');
     $(window).scroll(function(){
-
+        var scrollTop = $(this).scrollTop();
+        if( scrollTop > skillsDistance ){
+            $scrollUp.addClass('visible');
+        }else{
+            $scrollUp.removeClass('visible');
+        }
+    })
+    $scrollUp.click(function(e){
+        e.preventDefault();
+        $('html, body').animate({scrollTop: 0});
     })
 
 
