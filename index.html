@@ -3,51 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- icons : unicons, xeicon -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<!-- js -->
 <!-- jQuery CDN -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="./assets/css/style.css">
-<!-- unicons -->
-<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-<link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./assets/js/script.js"></script>
 <title>responsive portfolio ver2</title>
 </head>
 <body>
 
     <!----------------------- header ----------------------->
-    <header class="header header-inner flex" id="header">
-        <a href="#" id="logo">
-            박한성
-        </a>
-        <ul class="nav flex">
-            <li class="nav__item">
-                <a href="#">Home</a>
-            </li>
-            <li class="nav__item">
-                <a href="#">About</a>
-            </li>
-            <li class="nav__item">
-                <a href="#">Skills</a>
-            </li>
-            <li class="nav__item">
-                <a href="#">Services</a>
-            </li>
-            <li class="nav__item">
-                <a href="#">Portfolio</a>
-            </li>
-        </ul>
-        <div class="nav__btns flex">
-            <i class="uil uil-sun nav__icon"></i>
-            <i class="uil uil-moon nav__icon"></i>
-            <i class="uil uil-apps nav__icon"></i>
+    <header class="header" id="header">
+        <div class="header-inner flex">
+            <a href="#" id="logo">
+                박한성
+            </a>
+            <div class="nav__container">
+                <ul class="nav__list flex">
+                    <li class="nav__item">
+                        <a href="#" data-link="#home" class="nav__link">
+                            <i class="uil uil-estate nav__icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" data-link="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i>About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" data-link="#skills" class="nav__link">
+                            <i class="uil uil-file nav__icon"></i>
+                            Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" data-link="#services" class="nav__link">
+                            <i class="uil uil-briefcase-alt nav__icon"></i>
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" data-link="#portfolio" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i>
+                            Portfolio
+                        </a>
+                    </li>
+                    <i class="uil uil-times nav__close" id="navClose"></i>
+                </ul>
+            </div>
+            <div class="nav__btns flex">
+                <i class="uil uil-sun change-theme" id="buttonLight"></i>
+                <i class="uil uil-moon change-theme" id="buttonDark"></i>
+                <i class="uil uil-apps" id="navToggle"></i>
+            </div>
         </div>
     </header>
 
     <!----------------------- home ----------------------->
     <section class="home inner" id="home">
         <div class="home__social">
-            <i class="uil uil-facebook-f social__icon"></i>
-            <i class="uil uil-blogger social__icon"></i>
-            <i class="uil uil-github-alt social__icon"></i>
+            <a href="https://www.facebook.com" target="_blank" class="social__anchor">
+                <i class="uil uil-facebook-f social__icon"></i>
+            </a>
+            <a href="https://blog.naver.com/hs88610" target="_blank" class="social__anchor">
+                <i class="xi-naver-square xi-2x social__icon"></i>
+            </a>
+            <a href="https://github.com/parkhanseong" target="_blank" class="social__anchor">
+                <i class="uil uil-github-alt social__icon"></i>
+            </a>
         </div>
         <div class="home__intro">
             <h1 class="home__title">안녕하세요, <br>박한성입니다</h1>
@@ -67,7 +96,7 @@
 
     <!----------------------- about ----------------------->
     <section class="about inner" id="about">
-        <div class="section__title-wrap">
+        <div class="section__title--wrap">
             <h1 class="section__title">About Me</h1>
             <h3 class="section__subtitle">My introduction</h3>
         </div>
@@ -75,25 +104,27 @@
             <div class="about__img">
                 <img src="./assets/img/work2.png" alt="">
             </div>
-            <div class="about__info-wrap">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam totam cum minus eveniet modi omnis, odit magnam dolor adipisci illo perferendis cupiditate fugit error harum quod sed corporis id voluptatum.</p>
+            <div class="about__info--wrap">
+                <p class="about__info--para">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam totam cum minus eveniet modi omnis, odit magnam dolor adipisci illo perferendis cupiditate fugit error harum quod sed corporis id voluptatum.
+                </p>
                 <div class="about__info">
                     <div>
-                        <h2 class="about__info-title">08+</h2>
-                        <span class="about__info-name">experience</span>
+                        <h2 class="about__info--title">720+</h2>
+                        <span class="about__info--name">학습 시간</span>
                     </div>
                     <div>
-                        <h2 class="about__info-title">08+</h2>
-                        <span class="about__info-name">experience</span>
+                        <h2 class="about__info--title">100+</h2>
+                        <span class="about__info--name">실습 시간</span>
                     </div>
                     <div>
-                        <h2 class="about__info-title">08+</h2>
-                        <span class="about__info-name">experience</span>
+                        <h2 class="about__info--title">08+</h2>
+                        <span class="about__info--name">프로젝트</span>
                     </div>
                 </div>
                 <a href="#" class="about__download button">
-                    Download Resume
-                    <i class="uil uil-message"></i>
+                    이력서 다운로드
+                    <i class="uil uil-file-download-alt"></i>
                 </a>
             </div>
         </div>
@@ -102,7 +133,7 @@
 
     <!----------------------- skills ----------------------->
     <section class="skills inner" id="skills">
-        <div class="section__title-wrap">
+        <div class="section__title--wrap">
             <h1 class="section__title">Skills</h1>
             <h3 class="section__subtitle">My technical level</h3>
         </div>
@@ -116,9 +147,8 @@
                             <p>More than 4years</p>
                         </div>
                     </div>
-                    <i class="uil uil-angle-down skill__icon"></i>
+                    <i class="uil uil-angle-down skill__icon--arrow"></i>
                 </div>
-
                 <ul class="skill__data">
                     <li class="skill__progress">
                         <div class="skill__titles">
@@ -161,7 +191,7 @@
                             <p>More than 4years</p>
                         </div>
                     </div>
-                    <i class="uil uil-angle-down skill__icon"></i>
+                    <i class="uil uil-angle-down skill__icon--arrow"></i>
                 </div>
                 <ul class="skill__data">
                     <li class="skill__progress">
@@ -205,7 +235,7 @@
                             <p>More than 4years</p>
                         </div>
                     </div>
-                    <i class="uil uil-angle-down skill__icon"></i>
+                    <i class="uil uil-angle-down skill__icon--arrow"></i>
                 </div>
                 <ul class="skill__data">
                     <li class="skill__progress">
@@ -245,17 +275,16 @@
 
     <!----------------------- qualification ----------------------->
     <section class="qualification inner" id="qualification">
-        <div class="section__title-wrap">
-            <h1 class="section__title">qualification</h1>
+        <div class="section__title--wrap">
+            <h1 class="section__title">Qualification</h1>
             <h3 class="section__subtitle">My personal journey</h3>
         </div>
-        
         <div class="qualification__tabs">
-            <a href="#" class="tab">
+            <a href="#" class="qualification__tab active">
                 <i class="uil uil-graduation-cap"></i>
                 Education
             </a>
-            <a href="#" class="tab">
+            <a href="#" class="qualification__tab">
                 <i class="uil uil-briefcase-alt"></i>
                 Work
             </a>
@@ -303,6 +332,7 @@
                 <div class="qualification__blank"></div>
                 <div class="qualification__divider">
                     <div class="qualification__circle"></div>
+                    <!-- <div class="qualification__line"></div> -->
                 </div>
                 <div class="qualification__data">
                     <h3 class="title">computer</h3>
@@ -313,24 +343,49 @@
         </div>
 
         <!-- content 2 -->
-        <!-- <div class="qualification__content">
-            <div class="qualification__data">
-                <h3 class="title">computer</h3>
-                <span class="subtitle">university</span>
-                <div class="calendar">2009 - 2014</div>
+        <div class="qualification__content">
+            <div class="qualification__item">
+                <div class="qualification__data">
+                    <h3 class="title">software engineer</h3>
+                    <span class="subtitle">microsoft - korea</span>
+                    <div class="calendar">2009 - 2014</div>
+                </div>
+                <div class="qualification__divider">
+                    <div class="qualification__circle"></div>
+                    <div class="qualification__line"></div>
+                </div>
+                <div class="qualification__blank"></div>
             </div>
-            <div>
-                <div class="qualification__circle"></div>
-                <div class="qualification__line"></div>
+            <div class="qualification__item">
+                <div class="qualification__blank"></div>
+                <div class="qualification__divider">
+                    <div class="qualification__circle"></div>
+                    <div class="qualification__line"></div>
+                </div>
+                <div class="qualification__data">
+                    <h3 class="title">frontend developer</h3>
+                    <span class="subtitle">university</span>
+                    <div class="calendar">2009 - 2014</div>
+                </div>
             </div>
-            <div></div>
-        </div> -->
-
+            <div class="qualification__item">
+                <div class="qualification__data">
+                    <h3 class="title">computer</h3>
+                    <span class="subtitle">university</span>
+                    <div class="calendar">2009 - 2014</div>
+                </div>
+                <div class="qualification__divider">
+                    <div class="qualification__circle"></div>
+                    <!-- <div class="qualification__line"></div> -->
+                </div>
+                <div class="qualification__blank"></div>
+            </div>
+        </div>
     </section>
 
     <!----------------------- service ----------------------->
-    <section class="service inner" id="service">
-        <div class="section__title-wrap">
+    <section class="service inner" id="services">
+        <div class="section__title--wrap">
             <h1 class="section__title">Services</h1>
             <h3 class="section__subtitle">What i offer</h3>
         </div>
@@ -338,7 +393,7 @@
             <li class="service__item">
                 <i class="uil uil-window-grid"></i>
                 <h2>Ui/Ux<br>Designer</h2>
-                <a href="#">
+                <a href="#" class="service__item-button">
                     View More
                     <i class="uil uil-arrow-right"></i>
                 </a>
@@ -349,7 +404,7 @@
                                 Ui/Ux <br>
                                 Designer
                             </h3>
-                            <i class="uil uil-times"></i>
+                            <i class="uil uil-times modal__close"></i>
                         </div>
                         <ul>
                             <li>
@@ -373,13 +428,11 @@
                 </div>
             </li>
             <li class="service__item">
-                <a href="#">
-                    <i class="uil uil-brackets-curly"></i>
-                </a>
+                <i class="uil uil-brackets-curly"></i>
                 <h2>Web<br>Publisher</h2>
-                <a href="#">
+                <a href="#" class="service__item-button">
                     View More
-                    <i class="uil uil-arrow-right"></i>
+                    <i class="uil uil-arrow-right "></i>
                 </a>
                 <div class="service__modal">
                     <div class="service__modal-content">
@@ -388,7 +441,7 @@
                                 Ui/Ux <br>
                                 Designer
                             </h3>
-                            <i class="uil uil-times"></i>
+                            <i class="uil uil-times modal__close"></i>
                         </div>
                         <ul>
                             <li>
@@ -414,7 +467,7 @@
             <li class="service__item">
                 <i class="uil uil-pen"></i>
                 <h2>Branding<br>Designer</h2>
-                <a href="#">
+                <a href="#" class="service__item-button">
                     View More
                     <i class="uil uil-arrow-right"></i>
                 </a>
@@ -425,7 +478,7 @@
                                 Ui/Ux <br>
                                 Designer
                             </h3>
-                            <i class="uil uil-times"></i>
+                            <i class="uil uil-times modal__close"></i>
                         </div>
                         <ul>
                             <li>
@@ -453,55 +506,63 @@
 
     <!----------------------- portfolio ----------------------->
     <section class="portfolio inner" id="portfolio">
-        <div class="section__title-wrap">
+        <div class="section__title--wrap">
             <h1 class="section__title">Portfolio</h1>
-            <h3 class="section__subtitle">Most recent work</h3>
-            <!-- Swiper -->
-            <div class="swiper-container mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./assets/img/portfolio1.jpg" alt="" class="portfolio__img">
-                        <div class="portfolio__desc">
-                            <h2>Modern Website</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium natus unde eius odio? Sed pariatur commodi error eligendi autem reiciendis facilis, asperiores, saepe eius, recusandae nesciunt illo. Hic, cum enim?</p>
-                            <a href="#" class="button">
-                                View
-                                <i class="uil uil-arrow-right"></i>
-                            </a>
-                        </div>
+            <h3 class="section__subtitle">What i offer</h3>
+        </div>
+        <div class="custom__slider">
+            <div>
+                <div class="slider__content">
+                    <div class="slider__img">
+                        <img src="./assets/img/portfolio1.jpg" alt="">
                     </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/img/portfolio2.jpg" alt="" class="portfolio__img">
-                        <div class="portfolio__desc">
-                            <h2>Modern Website</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium natus unde eius odio? Sed pariatur commodi error eligendi autem reiciendis facilis, asperiores, saepe eius, recusandae nesciunt illo. Hic, cum enim?</p>
-                            <a href="#" class="button">
-                                View
-                                <i class="uil uil-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/img/portfolio3.jpg" alt="" class="portfolio__img">
-                        <div class="portfolio__desc">
-                            <h2>Modern Website</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium natus unde eius odio? Sed pariatur commodi error eligendi autem reiciendis facilis, asperiores, saepe eius, recusandae nesciunt illo. Hic, cum enim?</p>
-                            <a href="#" class="button">
-                                View
-                                <i class="uil uil-arrow-right"></i>
-                            </a>
-                        </div>
+                    <div class="slider__desc">
+                        <h1>클론 코딩 사이트</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        <a href="https://www.github.com" class="button slick__button" target="_blank">
+                            View Code
+                            <i class="uil uil-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+            </div>
+            <div>
+                <div class="slider__content">
+                    <div class="slider__img">
+                        <img src="./assets/img/portfolio2.jpg" alt="">
+                    </div>
+                    <div class="slider__desc">
+                        <h1>클론 코딩 사이트</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        <a href="https://www.github.com" class="button slick__button" target="_blank">
+                            View Code
+                            <i class="uil uil-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="slider__content">
+                    <div class="slider__img">
+                        <img src="./assets/img/portfolio3.jpg" alt="">
+                    </div>
+                    <div class="slider__desc">
+                        <h1>클론 코딩 사이트</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        <a href="https://www.github.com" class="button slick__button" target="_blank">
+                            View Code
+                            <i class="uil uil-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!----------- scroll top ---------------->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
 
     <footer class="footer" id="footer">
         <div class="inner">
@@ -534,8 +595,5 @@
             <p class="footer__copy">&copy; Alpaca Coding School. All right reserved</p>
         </div>
     </footer>
-
-    <script src="./assets/js/swiper-bundle.min.js"></script>
-    <script src="./assets/js/script.js"></script>
 </body>
 </html>
