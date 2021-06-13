@@ -110,19 +110,23 @@
                 </p>
                 <div class="about__info">
                     <div>
-                        <h2 class="about__info--title">720+</h2>
+                        <h2 class="about__info--title stoudyCount">720</h2>
                         <span class="about__info--name">학습 시간</span>
                     </div>
                     <div>
-                        <h2 class="about__info--title">100+</h2>
+                        <h2 class="about__info--title pracCount">100</h2>
                         <span class="about__info--name">실습 시간</span>
                     </div>
                     <div>
-                        <h2 class="about__info--title">08+</h2>
+                        <h2 class="about__info--title projectCount">08</h2>
                         <span class="about__info--name">프로젝트</span>
                     </div>
                 </div>
-                <a href="#" class="about__download button">
+                <!-- 
+                    - downlaod="파일명을 작성해주세요"
+                    - href="업로드한 파일 경로를 작성해주세요"
+                -->
+                <a download="웹퍼블리셔_이력서_박한성.pdf" href="assets/pdf/웹퍼블리셔_이력서_박한성.pdf" class="about__download button">
                     이력서 다운로드
                     <i class="uil uil-file-download-alt"></i>
                 </a>
@@ -406,20 +410,20 @@
                             </h3>
                             <i class="uil uil-times modal__close"></i>
                         </div>
-                        <ul>
-                            <li>
+                        <ul class="service__modal--list">
+                            <li class="service__modal--item">
                                 <i class="uil uil-check-circle"></i>
                                 Lorem ipsum dolor sit amet
                             </li>
-                            <li>
+                            <li class="service__modal--item">
                                 <i class="uil uil-check-circle"></i>
                                 Lorem ipsum dolor sit amet
                             </li>
-                            <li>
+                            <li class="service__modal--item">
                                 <i class="uil uil-check-circle"></i>
                                 Lorem ipsum dolor sit amet
                             </li>
-                            <li>
+                            <li class="service__modal--item">
                                 <i class="uil uil-check-circle"></i>
                                 Lorem ipsum dolor sit amet
                             </li>
@@ -443,20 +447,20 @@
                             </h3>
                             <i class="uil uil-times modal__close"></i>
                         </div>
-                        <ul>
-                            <li>
+                        <ul class="service__modal--list">
+                            <li class="service__modal--item">
                                 <i class="uil uil-check-circle"></i>
                                 Lorem ipsum dolor sit amet
                             </li>
-                            <li>
+                            <li class="service__modal--item">
                                 <i class="uil uil-check-circle"></i>
                                 Lorem ipsum dolor sit amet
                             </li>
-                            <li>
+                            <li class="service__modal--item">
                                 <i class="uil uil-check-circle"></i>
                                 Lorem ipsum dolor sit amet
                             </li>
-                            <li>
+                            <li class="service__modal--item">
                                 <i class="uil uil-check-circle"></i>
                                 Lorem ipsum dolor sit amet
                             </li>
@@ -480,20 +484,20 @@
                             </h3>
                             <i class="uil uil-times modal__close"></i>
                         </div>
-                        <ul>
-                            <li>
+                        <ul class="service__modal--list">
+                            <li class="service__modal--item">
                                 <i class="uil uil-check-circle"></i>
                                 Lorem ipsum dolor sit amet
                             </li>
-                            <li>
+                            <li class="service__modal--item">
                                 <i class="uil uil-check-circle"></i>
                                 Lorem ipsum dolor sit amet
                             </li>
-                            <li>
+                            <li class="service__modal--item">
                                 <i class="uil uil-check-circle"></i>
                                 Lorem ipsum dolor sit amet
                             </li>
-                            <li>
+                            <li class="service__modal--item">
                                 <i class="uil uil-check-circle"></i>
                                 Lorem ipsum dolor sit amet
                             </li>
@@ -519,10 +523,16 @@
                     <div class="slider__desc">
                         <h1>클론 코딩 사이트</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                        <a href="https://www.github.com" class="button slick__button" target="_blank">
-                            View Code
-                            <i class="uil uil-arrow-right"></i>
-                        </a>
+                        <div class="slider__buttons">
+                            <a href="https://www.github.com" class="button slick__button" target="_blank">
+                                View Code
+                                <i class="uil uil-arrow-right"></i>
+                            </a>
+                            <a href="https://www.github.com" class="button slick__button" target="_blank">
+                                View Site
+                                <i class="uil uil-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -534,10 +544,16 @@
                     <div class="slider__desc">
                         <h1>클론 코딩 사이트</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                        <a href="https://www.github.com" class="button slick__button" target="_blank">
-                            View Code
-                            <i class="uil uil-arrow-right"></i>
-                        </a>
+                        <div class="slider__buttons">
+                            <a href="https://www.github.com" class="button slick__button" target="_blank">
+                                View Code
+                                <i class="uil uil-arrow-right"></i>
+                            </a>
+                            <a href="https://www.github.com" class="button slick__button" target="_blank">
+                                View Site
+                                <i class="uil uil-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -549,10 +565,16 @@
                     <div class="slider__desc">
                         <h1>클론 코딩 사이트</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                        <a href="https://www.github.com" class="button slick__button" target="_blank">
-                            View Code
-                            <i class="uil uil-arrow-right"></i>
-                        </a>
+                        <div class="slider__buttons">
+                            <a href="https://www.github.com" class="button slick__button" target="_blank">
+                                View Code
+                                <i class="uil uil-arrow-right"></i>
+                            </a>
+                            <a href="https://www.github.com" class="button slick__button" target="_blank">
+                                View Site
+                                <i class="uil uil-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

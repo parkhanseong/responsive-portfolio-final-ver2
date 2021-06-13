@@ -21,7 +21,6 @@ $(function(){
         var $target = $(link);
         var distance = $target.offset().top;
         $('html, body').animate({scrollTop: distance});
-
         $('.nav__container').removeClass('visible');
         $(this).siblings().removeClass('active');
         $(this).addClass('active');
@@ -31,6 +30,22 @@ $(function(){
     $('#navToggle, .nav__close').click(function(){
         $('.nav__container').toggleClass('visible');
     })
+
+    /* ================= Home ================= */
+    // 1. 카운트할 셀렉터만 기입하면 자동으로 됩나다
+    // 2. duration은 시간입니다. 수정가능합니다
+    // 3. 엘리먼트에는 숫자만 있어야 합니다
+    $('.stoudyCount, .pracCount, .projectCount').each(function () {
+        $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+        }, {
+                duration: 3000,
+                easing: 'swing',
+                step: function (now) {
+                        $(this).text(Math.ceil(now));
+            }
+        });
+    });
 
     /* ================= skill tabs ================= */
     $('.skills__header').click(function(){
@@ -68,12 +83,15 @@ $(function(){
     /* ================= portfolio ================= */
     $('.custom__slider').slick({
         dots:true,
-        autoplay: true,
-        autoplaySpeed: 2000,
+        /* autoplay: true,
+        autoplaySpeed: 2000, */
     });
 
     /* ================= scroll up ================= */
-    
+    var $homeSection = $('#home')
+    $(window).scroll(function(){
+
+    })
 
 
 })
